@@ -14,15 +14,30 @@
 }
 
 #woman{
-    width:100%;
+    width:60%;
 }
 
 #man{
-    width:100%;
+    width:60%;
 }
 
 #cat{
-    width:100%;
+    width:60%;
+}
+
+#face1{
+    font-size:25px;
+    text-align: center;
+}
+
+#face2{
+    font-size:25px;
+    text-align: center;
+}
+
+#face3{
+    font-size:25px;
+    text-align: center;
 }
 
 #above:after{
