@@ -3,6 +3,8 @@ var count_sum=0;
 var count_array=[0,0,0];
 
 function hey_button(member_id){
+    var music = new Audio("hey.mp3");
+    music.play();
 
     // 表示するタグを取得
     disp1=document.getElementById("number_disp1");
