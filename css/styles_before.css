@@ -1,0 +1,186 @@
+/* チャット表示部のCSS設定 */
+#field{
+    /* 幅を800pxにする */
+    width: 1200px;
+    /* 高さを400px */
+    height: 800px;
+    /* 領域内の余白を上部7px, 左右0px, 下部14px */
+    padding: 7px 0 14px;
+    /* padding, borderを幅・高さに含める */
+    box-sizing: border-box;
+    /* 背景色を設定 */
+    background-color: skyblue;
+    /* 横向きのスクロール禁止 */
+    overflow-x: hidden;
+    /* 縦向きのスクロール許可 */
+    overflow-y: scroll;
+}
+/* Chrome、Safariでスクロールバーを非表示 */
+#field::-webkit-scrollbar {
+    display:none;
+}
+
+/* メッセージ入力・送信部のCSS設定 */
+#input-field{
+    width: 1200px;
+    height: 50px;
+    /* 子要素を並列に並べる */
+    display: flex;
+    box-sizing: border-box;
+    /* 領域の枠線の太さ・端点の形・色を設定 */
+    border: 1px solid gray;
+    background-color: white;
+}
+
+/* チャットメッセージ入力部分のCSS設定 */
+#chat-input{
+    height: 25px;
+    /* 幅を親要素の67%にする */
+    width: 67%;
+    /* フォントサイズを14px */
+    font-size: 14px;
+    /* 文字を色を黒にする */
+    color: black;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    /* 領域のコーナーの角丸を半径4px */
+    border-radius: 4px;
+    padding-left: 10px;
+    margin: auto 10px;
+}
+/* メッセージ入力部分がフォーカスされると色が変わる */
+#chat-input:focus{
+    border: 1.3px solid red;
+    outline: 0;
+}
+
+/* チャットメッセージ送信ボタン部のCSS設定 */
+#chat-button{
+    /* カーソルが乗った時にポインタにする */
+    cursor: pointer;
+    height: 25px;
+    width: 24%;
+    margin: auto;
+    margin-right: 7%; 
+    font-size: 13px;
+    background: #06c;
+    color: white;
+    display: block;
+    /*デフォルトのボーダーを消す*/
+    border: none;
+    box-sizing: border-box;
+    border-radius: 6.5px;
+}
+/* ボタン部分がフォーカスされても枠の色が変化しない */
+#chat-button:focus{
+    outline: 0;
+    /*background-color: red;*/
+}
+/* ボタン部分がクリックされると文字が消える（背景と同じ色になる） */
+#chat-button:active{
+    color: #06c;
+    background: #fff;
+    border:solid 1px #06c;
+}
+
+/* チャットのリスト全体 */
+#chat-ul{
+    /*ulのデフォルの隙間を消す*/
+    padding: 0;
+    width: 100%;
+}
+/* チャットの個々のリスト */
+#chat-ul > li{
+    width: 100%;
+    margin-top: 7px;
+}
+/* 個々のリストをそれぞれ左右に寄せる */
+.left{
+    /* 要件#3:チャットリストをbot側は左揃え、ユーザ側は右揃えにする */
+    text-align: left;
+}
+.right{
+    /* 要件#3:チャットリストをbot側は左揃え、ユーザ側は右揃えにする */
+    text-align: right;
+}
+
+/* チャット右側のメッセージ */
+/* メッセージ表示部 */
+.chat-right > .message{
+    /* 並列要素を横並びにする */
+    display: inline-block;
+    /* 要素を上揃えにする */
+    vertical-align: top;
+    background: greenyellow;
+    /* 文字を左揃えにする */
+    text-align: left;
+    /* 幅を最大400pxにする */
+    max-width: 400px;
+    /* 高さを最小23pxにする */
+    min-height: 23px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 7px 13px;
+    font-size: 15px;
+    /* 行間の幅を1.2emにする */
+    line-height: 1.2em;
+    word-wrap: break-word;
+}
+/* 吹き出しの右向き三角 */
+.chat-right > .triangle{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 9px;
+    margin-right: 5px;
+    /* 枠線を使って三角形を表現 */
+    border-top: 6px solid transparent;
+    border-left: 12px solid greenyellow;
+    border-bottom: 6px solid transparent;
+}
+
+/* チャット左側のメッセージ */
+/* アイコン部 */
+.chat-left > .icon{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    width: 30px;
+}
+/*アイコン部の画像*/
+.icon > img{
+    /* 画像サイズをアイコン部に合わせる */
+    width: 100%;
+    border-radius: 15px;
+}
+/* 吹き出しの左向き三角 */
+.chat-left > .triangle{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 9px;
+    margin-left: 5px;
+    border-top: 6px solid transparent;
+    border-right: 12px solid white;
+    border-bottom: 6px solid transparent;
+}
+/* メッセージ表示部 */
+.chat-left > .message{
+    display: inline-block;
+    left: 35px;
+    vertical-align: top;
+    background: white;
+    max-width: 1000px;
+    min-height: 23px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 7px 13px;
+    font-size: 15px;
+    line-height: 1.2em;
+    word-wrap: break-word;
+}
+/* メッセージ内の画像 */
+.message > img{
+    display: block;
+    width: 90%;
+}
+
+
