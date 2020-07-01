@@ -53,12 +53,13 @@
 }
 
 #hey_button{
+    width: 100%;
     /*float: left;*/
 
     /*display: inline;*/
 }
 #hey_button_box img{
-    width: 100%;
+    
 }
 #counter_all{
     /*padding-left: 400px;*/
