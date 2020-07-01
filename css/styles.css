@@ -72,3 +72,24 @@
     width: 200px;
     height: 200px;
 }
+
+#number_disp1{
+    font-size:22px;
+    text-align:center;
+}
+
+#number_disp2{
+    font-size:22px;
+    text-align:center;
+}
+
+#number_disp3{
+    font-size:22px;
+    text-align:center;
+}
+
+#number_disp_all{
+    font-size:50px;
+    text-align:center;
+    margin-top:15px;
+}
