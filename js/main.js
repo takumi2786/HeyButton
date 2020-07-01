@@ -1,3 +1,60 @@
+
+var count_sum=0;
+var count_array=[0,0,0];
+
+function hey_button(member_id){
+
+    // 表示するタグを取得
+    disp1=document.getElementById("number_disp1");
+    disp2=document.getElementById("number_disp2");
+    disp3=document.getElementById("number_disp3");
+
+    //メンバーのカウンタ情報を更新
+
+    // 自分の値を更新
+    count_array[member_id-1]+=1;
+
+    // 合計値を計算
+    count_sum = array_sum(count_array,3);
+
+    // 表示
+    disp_count();
+}
+
+
+function disp_count(){
+    // 表示するタグを取得
+    disp1=document.getElementById("number_disp1");
+    disp2=document.getElementById("number_disp2");
+    disp3=document.getElementById("number_disp3");
+
+    disp_all=document.getElementById("number_disp_all");
+
+    disp1.textContent=count_array[0];
+    disp2.textContent=count_array[1];
+    disp3.textContent=count_array[2];
+
+    disp_all.textContent=count_sum;
+}
+
+
+function array_sum(ar,length){
+    var sum=0;
+    for (var i = 0; i < length; i++) {
+        sum+=ar[i];
+    }
+
+    return sum;
+}
+
+
+
+
+
+
+
+
+
 // // 画面への出力
 // // valはメッセージ内容，personは誰が話しているか
 // function output(val, person) {
