@@ -1,0 +1,42 @@
+
+#display{
+    width: 800px;
+}
+.float{
+    float: left;
+    border:solid 1px;
+    width: 200px;
+    height: 200px;
+}
+
+#above:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#bottom:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#hey_button{
+    /*float: left;*/
+
+    /*display: inline;*/
+}
+#hey_button_box img{
+    width: 100%;
+}
+#counter_all{
+    /*padding-left: 400px;*/
+    /*float: right;*/
+/*    display: inline;
+    text-align: right;*/
+    /*border: solid 1px;*/
+}
+#box{
+    width: 200px;
+    height: 200px;
+}
