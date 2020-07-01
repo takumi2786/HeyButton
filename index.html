@@ -4,28 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <!-- 要件#1:ページタイトル・ファビコンを設定する -->
-    <title>問い合わせ</title>
+    <title>リモートの泉</title>
     <link rel="icon" href="./img/favicon.ico">
     <!-- cssの引用 -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!--チャット表示部-->
-    <div id="field">
-        <!-- チャットリスト全体 -->
-        <ul id="chat-ul"></ul>
-    </div>
-
-    <!--メッセージ入力・送信部-->
-    <div id="input-field">
-        <!-- チャットメッセージ入力部分 -->
-        <!-- 要件#2:チャットメッセージに初期メッセージとして「メッセージをどうぞ！」と表示する -->
-        <input type="text" id="chat-input" onkeypress="enter();">
-        <!-- チャットメッセージ送信ボタン部 -->
-        <input type="button" value="Send" id="chat-button">
+    <div id="display">
+        <div id="above">
+            <div id="hey_button"></div>
+            <div id="counter_all"></div>
+        </div>
+        <div id="bottom">
+            <div id="member_1"></div>
+            <div id="member_2"></div>
+            <div id="member_3"></div>
+        </div>
     </div>
     <!-- Javascriptの引用 -->
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+<!-- <div id="display">
+
+        <input type="text" id="chat-input" onkeypress="enter();">
+        <input type="button" value="Send" id="chat-button">
+    </div> -->
