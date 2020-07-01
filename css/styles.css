@@ -9,6 +9,22 @@
     height: 200px;
 }
 
+#izumi{
+    width:100%;
+}
+
+#woman{
+    width:100%;
+}
+
+#man{
+    width:100%;
+}
+
+#cat{
+    width:100%;
+}
+
 #above:after{
     content: "";
     display: table;
